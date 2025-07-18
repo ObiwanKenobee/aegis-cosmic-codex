@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Crown, Globe, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { SEOHead } from './SEOHead';
 import cosmicHero from '@/assets/cosmic-hero.jpg';
 
 export const Home = () => {
@@ -18,7 +19,55 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cosmic-gradient">
+    <>
+      <SEOHead
+        title="AEGIS: Regnum Terrae et Caelorum - Ethical Planetary Governance Platform"
+        description="Join the cosmic citizenship movement for Earth, Ocean, and Space. Uniting royal wisdom, indigenous knowledge, and AI for planetary stewardship. Discover bioregional governance, regenerative economics, and interplanetary ethics."
+        keywords={[
+          "planetary stewardship", "ethical governance", "indigenous wisdom", "royal houses",
+          "climate action", "biodiversity conservation", "sustainable development", 
+          "interplanetary colonization", "cosmic citizenship", "decentralized governance",
+          "AI ethics", "environmental justice", "traditional ecological knowledge",
+          "carbon credits", "bioregional planning", "space ethics", "ecological restoration",
+          "community governance", "ancestral knowledge", "regenerative economics",
+          "Pacific Islands climate", "Amazon conservation", "Himalayan glaciers",
+          "coral reef restoration", "indigenous rights", "space colonization ethics",
+          "Mars governance", "lunar settlements", "asteroid mining ethics",
+          "climate vulnerable nations", "small island states", "biodiversity hotspots"
+        ]}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AEGIS: Regnum Terrae et Caelorum",
+          "description": "Ethical planetary governance platform for climate-vulnerable regions worldwide",
+          "url": typeof window !== 'undefined' ? window.location.origin : 'https://aegis-cosmic.com',
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://aegis-cosmic.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Environmental Leaders, Indigenous Communities, Policy Makers, Royal Houses, Climate Activists, Space Industry"
+          },
+          "geographicArea": [
+            { "@type": "Place", "name": "Pacific Islands" },
+            { "@type": "Place", "name": "Amazon Basin" },
+            { "@type": "Place", "name": "Himalayas" },
+            { "@type": "Place", "name": "Coral Triangle" },
+            { "@type": "Place", "name": "Madagascar" },
+            { "@type": "Place", "name": "Congo Basin" },
+            { "@type": "Place", "name": "Maldives" },
+            { "@type": "Place", "name": "Bangladesh" },
+            { "@type": "Place", "name": "Philippines" },
+            { "@type": "Place", "name": "Indigenous Territories Worldwide" }
+          ]
+        }}
+      />
+      <div className="min-h-screen bg-cosmic-gradient">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Cosmic Background */}
@@ -184,7 +233,154 @@ export const Home = () => {
           ))}
         </div>
       </section>
+
+      {/* Regional Focus Section for SEO */}
+      <section className="py-16 px-4 bg-card/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="font-royal text-3xl font-bold mb-4 text-foreground">
+              Priority Regions for Planetary Stewardship
+            </h3>
+            <p className="font-cosmic text-lg text-muted-foreground max-w-3xl mx-auto">
+              AEGIS prioritizes climate-vulnerable regions, biodiversity hotspots, and indigenous territories worldwide
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                region: "Pacific Islands",
+                countries: "Tuvalu, Kiribati, Marshall Islands, Palau, Fiji",
+                urgency: "Sea level rise, coral bleaching, freshwater scarcity",
+                solutions: "Coral restoration, renewable energy, water security"
+              },
+              {
+                region: "Amazon Basin", 
+                countries: "Brazil, Peru, Colombia, Ecuador, Bolivia",
+                urgency: "Deforestation, indigenous rights, biodiversity loss",
+                solutions: "Forest protection, indigenous governance, carbon credits"
+              },
+              {
+                region: "Himalayas",
+                countries: "Nepal, Bhutan, Tibet, Northern India",
+                urgency: "Glacial melt, water security, mountain ecosystems",
+                solutions: "Glacial monitoring, watershed management, sustainable tourism"
+              },
+              {
+                region: "Coral Triangle",
+                countries: "Indonesia, Malaysia, Philippines, Papua New Guinea",
+                urgency: "Marine biodiversity, overfishing, coastal erosion",
+                solutions: "Marine protected areas, sustainable fishing, coral farming"
+              },
+              {
+                region: "Madagascar",
+                countries: "Madagascar, Comoros, Mauritius, Seychelles",
+                urgency: "Endemic species loss, cyclones, food security",
+                solutions: "Species conservation, climate adaptation, sustainable agriculture"
+              },
+              {
+                region: "Congo Basin",
+                countries: "Democratic Republic of Congo, Cameroon, Central African Republic",
+                urgency: "Forest degradation, wildlife trafficking, community rights",
+                solutions: "Anti-poaching, community forestry, eco-tourism"
+              }
+            ].map((region, index) => (
+              <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm p-6">
+                <h4 className="font-royal text-lg font-semibold mb-2 text-foreground">
+                  {region.region}
+                </h4>
+                <p className="font-cosmic text-sm text-muted-foreground mb-3">
+                  {region.countries}
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="font-cosmic text-xs font-medium text-destructive">Challenges:</span>
+                    <p className="font-cosmic text-xs text-muted-foreground">{region.urgency}</p>
+                  </div>
+                  <div>
+                    <span className="font-cosmic text-xs font-medium text-primary">AEGIS Solutions:</span>
+                    <p className="font-cosmic text-xs text-muted-foreground">{region.solutions}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Indigenous Knowledge Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h3 className="font-royal text-3xl font-bold mb-4 text-foreground">
+            Indigenous Wisdom for Modern Challenges
+          </h3>
+          <p className="font-cosmic text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            Learning from First Nations, Aboriginal communities, Maori, Inuit, and indigenous peoples worldwide
+          </p>
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+            {[
+              { concept: "Ubuntu", culture: "African", principle: "I am because we are" },
+              { concept: "Buen Vivir", culture: "Andean", principle: "Living well in harmony" },
+              { concept: "Taonga", culture: "Māori", principle: "Sacred treasures of nature" },
+              { concept: "Sila", culture: "Inuit", principle: "Breath of life in all things" }
+            ].map((wisdom, index) => (
+              <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm p-4">
+                <h4 className="font-royal font-semibold text-foreground mb-1">{wisdom.concept}</h4>
+                <p className="font-cosmic text-sm text-primary mb-2">{wisdom.culture}</p>
+                <p className="font-cosmic text-xs text-muted-foreground italic">"{wisdom.principle}"</p>
+              </Card>
+            ))}
+          </div>
+          <Button size="lg" variant="outline" className="font-cosmic font-semibold">
+            Explore Indigenous Partnerships
+          </Button>
+        </div>
+      </section>
+
+      {/* Space Ethics Section */}
+      <section className="py-16 px-4 bg-card/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto text-center">
+          <h3 className="font-royal text-3xl font-bold mb-4 text-foreground">
+            Interplanetary Ethics & Space Governance
+          </h3>
+          <p className="font-cosmic text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            Preparing ethical frameworks for Mars colonies, lunar settlements, and asteroid mining
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Mars Colonization Ethics",
+                description: "Governance frameworks for Red Planet settlements",
+                keywords: "Mars governance, space colonization, interplanetary law"
+              },
+              {
+                title: "Lunar Mining Protocols", 
+                description: "Sustainable resource extraction on the Moon",
+                keywords: "lunar mining, space resources, moon base governance"
+              },
+              {
+                title: "Asteroid Belt Stewardship",
+                description: "Ethical guidelines for asteroid mining operations",
+                keywords: "asteroid mining, space mining ethics, orbital governance"
+              }
+            ].map((topic, index) => (
+              <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm p-6">
+                <h4 className="font-royal text-lg font-semibold mb-3 text-foreground">
+                  {topic.title}
+                </h4>
+                <p className="font-cosmic text-muted-foreground mb-4">
+                  {topic.description}
+                </p>
+                <div className="text-xs text-primary font-cosmic">
+                  Keywords: {topic.keywords}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
+    </>
   );
 };
 

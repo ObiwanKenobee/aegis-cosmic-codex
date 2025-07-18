@@ -1,14 +1,174 @@
-User-agent: Googlebot
+User-agent: *
 Allow: /
 
+# Sitemap
+Sitemap: https://aegis-cosmic.com/sitemap.xml
+
+# Optimized for environmental search bots
+User-agent: ClimateBot
+Allow: /
+
+User-agent: EnvironmentCrawler
+Allow: /
+
+User-agent: SustainabilityBot
+Allow: /
+
+User-agent: BiodiversityBot
+Allow: /
+
+User-agent: IndigenousBot
+Allow: /
+
+User-agent: SpaceBot
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: LinkedInBot
 Allow: /
 
-User-agent: *
+User-agent: WhatsApp
 Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Academic and Research Crawlers
+User-agent: ia_archiver
+Allow: /
+
+User-agent: Wayback
+Allow: /
+
+User-agent: ResearchBot
+Allow: /
+
+User-agent: AcademicBot
+Allow: /
+
+User-agent: ScientificCrawler
+Allow: /
+
+# NGO and Environmental Organization Crawlers
+User-agent: WWFBot
+Allow: /
+
+User-agent: GreenpeaceBot
+Allow: /
+
+User-agent: UNEPBot
+Allow: /
+
+User-agent: ConservationBot
+Allow: /
+
+User-agent: WWFCrawler
+Allow: /
+
+User-agent: NatureConservancyBot
+Allow: /
+
+User-agent: SierraClubBot
+Allow: /
+
+# International Organization Crawlers
+User-agent: UNBot
+Allow: /
+
+User-agent: WorldBankBot
+Allow: /
+
+User-agent: IPCCBot
+Allow: /
+
+User-agent: UNFCCCBot
+Allow: /
+
+User-agent: CBDBot
+Allow: /
+
+User-agent: ITOSBot
+Allow: /
+
+# Space Industry Crawlers
+User-agent: NASABot
+Allow: /
+
+User-agent: ESABot
+Allow: /
+
+User-agent: SpaceXBot
+Allow: /
+
+User-agent: BlueOriginBot
+Allow: /
+
+User-agent: VirginGalacticBot
+Allow: /
+
+# Government Environmental Agencies
+User-agent: EPABot
+Allow: /
+
+User-agent: NOAABot
+Allow: /
+
+User-agent: USGSBot
+Allow: /
+
+User-agent: NASABot
+Allow: /
+
+User-agent: DOEBot
+Allow: /
+
+# Disallow resource-intensive crawling
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /api/internal/
+
+# Allow important resource discovery
+Allow: /assets/
+Allow: /images/
+Allow: /docs/
+Allow: /guides/
+Allow: /resources/
+
+# Crawl delay for resource management
+Crawl-delay: 2
+
+# Host declaration
+Host: https://aegis-cosmic.com
