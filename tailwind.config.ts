@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// AEGIS Cosmic Palette
+				cosmic: {
+					void: 'hsl(var(--cosmic-void))',
+					dust: 'hsl(var(--stellar-dust))',
+					glow: 'hsl(var(--nebula-glow))',
+					flare: 'hsl(var(--solar-flare))'
 				}
+			},
+			fontFamily: {
+				royal: ['Fraunces', 'Georgia', 'serif'],
+				cosmic: ['Inter', 'Helvetica', 'sans-serif'],
+				sans: ['Inter', 'Helvetica', 'sans-serif'],
+				serif: ['Fraunces', 'Georgia', 'serif']
+			},
+			backgroundImage: {
+				'cosmic-gradient': 'var(--gradient-cosmic)',
+				'celestial-gradient': 'var(--gradient-celestial)',
+				'royal-gradient': 'var(--gradient-royal)',
+				'ascension-gradient': 'var(--gradient-ascension)'
+			},
+			boxShadow: {
+				'royal': 'var(--shadow-royal)',
+				'celestial': 'var(--shadow-celestial)',
+				'cosmic-glow': 'var(--glow-cosmic)',
+				'stellar-glow': 'var(--glow-stellar)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +110,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'orbital-spin': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'celestial-pulse': {
+					'0%, 100%': { 
+						opacity: '0.8',
+						transform: 'scale(1)' 
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1.05)' 
+					}
+				},
+				'cosmic-float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'25%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'50%': { transform: 'translateY(-5px) rotate(0deg)' },
+					'75%': { transform: 'translateY(-15px) rotate(-1deg)' }
+				},
+				'stellar-drift': {
+					'0%': { transform: 'translateX(-100vw) translateY(100vh)' },
+					'100%': { transform: 'translateX(100vw) translateY(-100vh)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'orbital-spin': 'orbital-spin 20s linear infinite',
+				'celestial-pulse': 'celestial-pulse 3s ease-in-out infinite',
+				'cosmic-float': 'cosmic-float 6s ease-in-out infinite',
+				'stellar-drift': 'stellar-drift 25s linear infinite'
 			}
 		}
 	},
