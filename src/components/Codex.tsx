@@ -243,3 +243,5 @@ export const Codex = () => {
     </div>
   );
 };
+
+export default Codex;

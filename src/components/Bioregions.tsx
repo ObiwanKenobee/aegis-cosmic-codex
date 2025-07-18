@@ -264,3 +264,5 @@ export const Bioregions = () => {
     </div>
   );
 };
+
+export default Bioregions;

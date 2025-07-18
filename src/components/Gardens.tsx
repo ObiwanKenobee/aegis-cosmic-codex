@@ -265,3 +265,5 @@ export const Gardens = () => {
     </div>
   );
 };
+
+export default Gardens;

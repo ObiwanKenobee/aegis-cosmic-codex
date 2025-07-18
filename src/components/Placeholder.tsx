@@ -47,3 +47,5 @@ export const Placeholder = ({ title, description, icon: Icon, comingSoon = true 
     </div>
   );
 };
+
+export default Placeholder;

@@ -3,12 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Layout } from "./components/Layout";
-import { Home } from "./components/Home";
-import { Codex } from "./components/Codex";
-import { Bioregions } from "./components/Bioregions";
-import { Gardens } from "./components/Gardens";
-import { Placeholder } from "./components/Placeholder";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import Codex from "./components/Codex";
+import Bioregions from "./components/Bioregions";
+import Gardens from "./components/Gardens";
+import Placeholder from "./components/Placeholder";
 import { Globe, Sparkles, Scroll, Shield } from "lucide-react";
 import NotFound from "./pages/NotFound";
 
